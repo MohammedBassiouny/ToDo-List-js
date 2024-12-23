@@ -1,0 +1,117 @@
+
+.input::placeholder{
+    color: blueviolet;
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+
+.hello{
+    background-color: aliceblue;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size:1.5rem ;
+    font-weight: bold;
+    text-align: center;
+    animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+    0% { 
+        color: red;
+        
+    }     
+    50% { 
+        color: transparent;
+    } 
+    100% { 
+        color: red; 
+    }    
+}
+
+
+
+
+/* .task{
+    position: relative;
+    background-color: aliceblue;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size:1.5rem ;
+    font-weight: bold;
+} */
+
+.task {
+    position: relative;
+    background-color: aliceblue;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0; 
+    transform: translateX(20px); 
+    animation: fadeIn 0.8s ease-out forwards; 
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+        transform: translateX(20px); 
+    }
+        100% {
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
+.del{
+    position: absolute;
+    right: 10px;
+    color: aliceblue;
+    background-color:crimson;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.done{
+    color: green;
+    text-decoration: line-through;
+    background-color:bisque;
+}
+
+.done::after{
+    position: absolute;
+    content: "✓";
+    right: 180px;
+}
+
+.edit{
+    position: absolute;
+    right: 90px;
+    color: aliceblue;
+    cursor: pointer;
+    background-color: green;
+    padding: 5px 15px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.done .edit{
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.save{
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    background-color: green;
+}
+
